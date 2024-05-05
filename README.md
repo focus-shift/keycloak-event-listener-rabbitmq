@@ -8,6 +8,7 @@
 | 2.x    | 13.x             |
 | 3.x    | 16.x             |
 | 4.x    | 22.x             |
+| 5.x    | 23.x             |
 
 For example here is the notification of the user updated by administrator
 
