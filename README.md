@@ -1,14 +1,13 @@
 # keycloak-event-listener-rabbitmq
 
-##### A Keycloak SPI plugin that publishes events to a RabbitMq server.  
+A Keycloak SPI plugin that publishes events to a RabbitMQ messaging broker.
 
-| Plugin | min Keycloak ver |
-|--------|------------------|
-| 1.x    | 10.x             |
-| 2.x    | 13.x             |
-| 3.x    | 16.x             |
-| 4.x    | 22.x             |
-| 5.x    | 23.x             |
+## Keycloak Version Compatibility
+
+The version of this plugin is using the same version baseline like Keycloak itself.
+E.g. the plugin version 25.0.1 is compatible with Keycloak 25.0.1.
+
+##### A Keycloak SPI plugin that publishes events to a RabbitMq server.  
 
 For example here is the notification of the user updated by administrator
 

@@ -5,16 +5,17 @@
     <groupId>com.github.aznamier.keycloak.event.provider</groupId>
     <artifactId>keycloak-to-rabbit</artifactId>
     <packaging>jar</packaging>
-	<version>5.1.0-SNAPSHOT</version>
+	<version>25.0.1-SNAPSHOT</version>
 
 
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-    	<keycloak.version>23.0.0</keycloak.version>
+    	<keycloak.version>25.0.1</keycloak.version>
     	<jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
 	<distributionManagement>
@@ -53,13 +54,14 @@
             <scope>provided</scope>
             <version>${keycloak.version}</version>
         </dependency>
+        <!-- ugly hack to get jakarta xml annotations o.O -->
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-saml-core-public</artifactId>
             <scope>provided</scope>
             <version>${keycloak.version}</version>
         </dependency>
-        
+
         <!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
 		<dependency>
 		    <groupId>com.rabbitmq</groupId>
