@@ -1,34 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>com.github.aznamier.keycloak.event.provider</groupId>
     <artifactId>keycloak-to-rabbit</artifactId>
     <packaging>jar</packaging>
-	<version>25.0.2-SNAPSHOT</version>
-
+    <version>25.0.2-SNAPSHOT</version>
 
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-    	<keycloak.version>25.0.1</keycloak.version>
-    	<jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
+        <keycloak.version>25.0.1</keycloak.version>
+        <jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
-	<distributionManagement>
-	   <repository>
-	     <id>github</id>
-	     <name>GitHub AZNAMIER Apache Maven Packages</name>
-	     <url>https://maven.pkg.github.com/aznamier/keycloak-event-listener-rabbitmq</url>
-	   </repository>
-	</distributionManagement>
-	
-	
-	
-	
+
     <dependencies>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -62,13 +50,12 @@
             <version>${keycloak.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
-		<dependency>
-		    <groupId>com.rabbitmq</groupId>
-		    <artifactId>amqp-client</artifactId>
-		    <version>5.21.0</version>
-		</dependency>
-        
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.21.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -79,36 +66,29 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
             </plugin>
-            
+
             <!-- Maven Assembly Plugin -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<finalName>${jar.finalName}</finalName>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<appendAssemblyId>false</appendAssemblyId>
-				</configuration>
-				<executions>
-				  <execution>
-					<id>make-assembly</id>
-					<phase>package</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
-				  </execution>
-				</executions>
-			</plugin>
-			
-<!--            <plugin>-->
-<!--                <groupId>org.wildfly.plugins</groupId>-->
-<!--                <artifactId>wildfly-maven-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <skip>false</skip>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <finalName>${jar.finalName}</finalName>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 </project>
