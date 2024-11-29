@@ -10,10 +10,10 @@
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-        <keycloak.version>25.0.6</keycloak.version>
+        <keycloak.version>26.0.1</keycloak.version>
         <jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>
-            <version>5.21.0</version>
+            <version>5.23.0</version>
         </dependency>
 
     </dependencies>
