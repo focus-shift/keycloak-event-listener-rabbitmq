@@ -1,5 +1,6 @@
 package com.github.aznamier.keycloak.event.provider;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 @JsonTypeInfo(use = Id.CLASS)
 public class EventClientNotificationMqMsg extends Event implements Serializable {
 
+	@Serial
 	private static final long serialVersionUID = -2192461924304841222L;
 	
 	public static EventClientNotificationMqMsg create(Event event) {
