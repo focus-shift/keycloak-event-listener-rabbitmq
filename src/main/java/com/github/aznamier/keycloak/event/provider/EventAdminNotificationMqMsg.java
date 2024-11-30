@@ -1,5 +1,6 @@
 package com.github.aznamier.keycloak.event.provider;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 @JsonTypeInfo(use = Id.CLASS)
 public class EventAdminNotificationMqMsg extends AdminEvent implements Serializable  {
 
+	@Serial
 	private static final long serialVersionUID = -7367949289101799624L;
 
 	public static EventAdminNotificationMqMsg create(AdminEvent adminEvent) {
@@ -28,6 +30,7 @@ public class EventAdminNotificationMqMsg extends AdminEvent implements Serializa
 		msg.setResourceType(adminEvent.getResourceType());
 		msg.setResourceTypeAsString(adminEvent.getResourceTypeAsString());
 		msg.setTime(adminEvent.getTime());
+		msg.setDetails(adminEvent.getDetails());
 		return msg;
 	}
 
