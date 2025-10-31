@@ -5,12 +5,12 @@
     <groupId>com.github.aznamier.keycloak.event.provider</groupId>
     <artifactId>keycloak-to-rabbit</artifactId>
     <packaging>jar</packaging>
-    <version>27.0.0-SNAPSHOT</version>
+    <version>26.4.2</version>
 
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-        <keycloak.version>26.3.5</keycloak.version>
+        <keycloak.version>26.4.2</keycloak.version>
         <jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
