@@ -44,7 +44,7 @@ class RabbitMqEventListenerProviderIT {
             .withNetworkAliases(RABBITMQ_NETWORK_ALIAS);
 
     @Container
-    static final KeycloakContainer KEYCLOAK = new KeycloakContainer()
+    static final KeycloakContainer KEYCLOAK = new KeycloakContainer("quay.io/keycloak/keycloak:26.6.1")
             .withNetwork(NETWORK)
             .withProviderClassesFrom("target/classes")
             .withProviderLibsFrom(PROVIDER_DEPENDENCIES)
