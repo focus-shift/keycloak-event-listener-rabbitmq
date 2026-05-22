@@ -23,7 +23,7 @@
         <testcontainers-keycloak.version>4.2.1</testcontainers-keycloak.version>
         <awaitility.version>4.3.0</awaitility.version>
         <json-path.version>3.0.0</json-path.version>
-        <shrinkwrap-resolver.version>3.3.5</shrinkwrap-resolver.version>
+        <shrinkwrap-resolver.version>3.3.6</shrinkwrap-resolver.version>
         <maven-failsafe-plugin.version>3.5.5</maven-failsafe-plugin.version>
     </properties>
 
