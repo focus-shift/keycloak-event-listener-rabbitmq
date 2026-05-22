@@ -39,12 +39,12 @@ class RabbitMqEventListenerProviderIT {
             .asList(File.class);
 
     @Container
-    static final RabbitMQContainer RABBITMQ = new RabbitMQContainer("rabbitmq:4.2-management")
+    static final RabbitMQContainer RABBITMQ = new RabbitMQContainer("rabbitmq:4.3-management")
             .withNetwork(NETWORK)
             .withNetworkAliases(RABBITMQ_NETWORK_ALIAS);
 
     @Container
-    static final KeycloakContainer KEYCLOAK = new KeycloakContainer("quay.io/keycloak/keycloak:26.6.1")
+    static final KeycloakContainer KEYCLOAK = new KeycloakContainer("quay.io/keycloak/keycloak:26.6.2")
             .withNetwork(NETWORK)
             .withProviderClassesFrom("target/classes")
             .withProviderLibsFrom(PROVIDER_DEPENDENCIES)
