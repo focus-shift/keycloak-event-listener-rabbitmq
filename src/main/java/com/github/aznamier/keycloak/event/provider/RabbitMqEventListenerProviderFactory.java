@@ -112,18 +112,37 @@ public class RabbitMqEventListenerProviderFactory implements EventListenerProvid
 
     @Override
     public void close() {
-        try {
-            channel.close();
-            connection.close();
-        }
-        catch (IOException | TimeoutException e) {
-            log.error("keycloak-to-rabbitmq ERROR on close", e);
-        }
+        closeChannel();
+        closeConnection();
     }
 
     @Override
     public String getId() {
         return "keycloak-to-rabbitmq";
+    }
+
+    private void closeChannel() {
+        if (channel == null || !channel.isOpen()) {
+            return;
+        }
+        try {
+            channel.close();
+        }
+        catch (IOException | TimeoutException e) {
+            log.error("keycloak-to-rabbitmq ERROR closing channel", e);
+        }
+    }
+
+    private void closeConnection() {
+        if (connection == null || !connection.isOpen()) {
+            return;
+        }
+        try {
+            connection.close();
+        }
+        catch (IOException e) {
+            log.error("keycloak-to-rabbitmq ERROR closing connection", e);
+        }
     }
 
 }
