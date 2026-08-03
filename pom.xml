@@ -10,8 +10,8 @@
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-        <keycloak.version>26.6.3</keycloak.version>
-        <keycloak-adminclient.version>26.0.9</keycloak-adminclient.version>
+        <keycloak.version>26.6.4</keycloak.version>
+        <keycloak-adminclient.version>26.0.10</keycloak-adminclient.version>
         <jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
